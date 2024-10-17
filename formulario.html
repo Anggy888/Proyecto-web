@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Formulario de Registro</h2>
+        <form>
+            <!-- Nombre y apellido (input-group) -->
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nombre y Apellido</span>
+                <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="basic-addon1">
+                <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" aria-describedby="basic-addon1">
+            </div>
+
+            <!-- Correo (validación email) y contraseña (campo pw). En la misma fila. -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña" required>
+                </div>
+            </div>
+
+            <!-- Dirección (Text). -->
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Ingrese su dirección" required>
+            </div>
+
+            <!-- Descripción (Text-area con Floating) -->
+            <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Escribe una descripción aquí" id="descripcion" style="height: 100px"></textarea>
+                <label for="descripcion">Descripción</label>
+            </div>
+
+            <!-- Ciudad, Departamento (form-select) y codigo de area. En la misma fila.  -->
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <select class="form-select" id="ciudad" required>
+                        <option selected disabled value="">Seleccione su ciudad</option>
+                        <option value="1">Bogotá</option>
+                        <option value="2">Medellín</option>
+                        <option value="3">Cali</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="departamento" class="form-label">Departamento</label>
+                    <select class="form-select" id="departamento" required>
+                        <option selected disabled value="">Seleccione su departamento</option>
+                        <option value="1">Cundinamarca</option>
+                        <option value="2">Antioquia</option>
+                        <option value="3">Valle del Cauca</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="codigoArea" class="form-label">Código de Área</label>
+                    <input type="text" class="form-control" id="codigoArea" placeholder="Código de área" required>
+                </div>
+            </div>
+
+            <!-- Selector (radio) y Autorización (checkbox) -->
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Selecciona una opción</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcion" id="opcion1" value="opcion1" required>
+                            <label class="form-check-label" for="opcion1">Opción 1</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="opcion" id="opcion2" value="opcion2" required>
+                            <label class="form-check-label" for="opcion2">Opción 2</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="autorizacion" required>
+                        <label class="form-check-label" for="autorizacion">Autorizo el tratamiento de mis datos personales</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
